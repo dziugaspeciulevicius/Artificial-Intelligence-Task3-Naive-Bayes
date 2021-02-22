@@ -74,21 +74,6 @@ print("y_train data: \n")
 print(y_train)
 print("-----------------------\n")
 
-conditions = [
-    (inputs['average_score'] <= 49.49),
-    (inputs['average_score'] >= 49.5)
-]
-
-values = [0, 1]
-
-inputs['PASSED'] = np.select(conditions, values)
-
-print("\n-----------------------")
-print('TABLE W/ AVERAGE SCORE & PASSED?: \n')
-print(inputs)
-print("-----------------------\n")
-
-
 # Now we can use NB model
 model = GaussianNB()
 
